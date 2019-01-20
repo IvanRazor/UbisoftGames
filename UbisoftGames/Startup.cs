@@ -43,7 +43,11 @@ namespace UbisoftGames
             //var context = app.ApplicationServices.GetService<GameContext>();
             AddTestData(app);
 
-            app.UseMvc();
+            app.UseMvc(
+            routes =>
+            {
+                routes.MapRoute("default", "{controller=Games}/{action=Index}/{id?}");
+            });
 
             /*app.Run(async (context) =>
             {

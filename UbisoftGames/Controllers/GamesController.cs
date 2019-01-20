@@ -10,7 +10,6 @@ using UbisoftGames.Models;
 
 namespace UbisoftGames.Controllers
 {
-    [Route("[controller]")]
     public class GamesController : Controller
     {
         private readonly GameContext _context;
@@ -22,7 +21,16 @@ namespace UbisoftGames.Controllers
 
         //[HttpGet("{id}")]
         [HttpGet]
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
+        {
+            var games = await _context.Games.Select(x => x).ToListAsync();
+
+
+            return View(games);
+        }
+
+        [HttpGet]
+        public IActionResult About()
         {
             return View();
         }
