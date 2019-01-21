@@ -39,6 +39,11 @@ namespace UbisoftGames
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+                app.UseHsts();
+            }
 
             //var context = app.ApplicationServices.GetService<GameContext>();
             AddTestData(app);
@@ -48,6 +53,10 @@ namespace UbisoftGames
             {
                 routes.MapRoute("default", "{controller=Games}/{action=Index}/{id?}");
             });
+
+            app.UseHttpsRedirection();
+            app.UseStaticFiles();
+            app.UseCookiePolicy();
 
             /*app.Run(async (context) =>
             {

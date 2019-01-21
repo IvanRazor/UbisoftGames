@@ -25,6 +25,26 @@ namespace UbisoftGames.Controllers
         {
             var games = await _context.Games.Select(x => x).ToListAsync();
 
+            //List<HtmlGameContainer> htmlGames = new List<HtmlGameContainer>();
+
+            //int i = 0;
+            //foreach (var game in games)
+            //{
+            //    string htmlOpenTag = "";
+            //    string htmlCloseTag = "";
+
+            //    if (i == 0)
+            //        htmlOpenTag = "<div class='row'>";
+                
+            //    if (i == 3 || games.IndexOf(game) == games.Count)
+            //    {
+            //        i = -1;
+            //        htmlCloseTag = "</div>";
+            //    }
+
+            //    htmlGames.Add(new HtmlGameContainer() { Game = game, HtmlOpenTag = htmlOpenTag, HtmlCloseTag = htmlCloseTag });
+            //    i++;
+            //}
 
             return View(games);
         }

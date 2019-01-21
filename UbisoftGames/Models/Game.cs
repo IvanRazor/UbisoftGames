@@ -13,4 +13,11 @@ namespace UbisoftGames.Models
         public string Description { get; set; }
         public bool IsReleased { get; set; }
     }
+
+    public class HtmlGameContainer
+    {
+        public Game Game { get; set; }
+        public string HtmlOpenTag { get; set; }
+        public string HtmlCloseTag { get; set; }
+    }
 }
