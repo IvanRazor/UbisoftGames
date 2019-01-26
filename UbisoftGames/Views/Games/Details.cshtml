@@ -1,0 +1,40 @@
+﻿@model UbisoftGames.Models.Game
+
+<div>
+    <h4>Game</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+        <dd>
+            location: @Html.DisplayFor(model => model.Image)
+            <br/>
+            <img src="@Html.Raw(Model.Image)" alt="card-game" width="270px" class="CardGame__image">
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsReleased)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsReleased)
+        </dd>
+    </dl>
+</div>
+<div class="navbar">
+    @Html.ActionLink("Back to List", "Index", "/")
+    @Html.ActionLink("Edit", "Edit", "Games", new { id = Model.Id })
+    @Html.ActionLink("Create New", "Create", "Games")
+    @Html.ActionLink("Delete", "Delete", "Games", new { id = Model.Id })
+</div>

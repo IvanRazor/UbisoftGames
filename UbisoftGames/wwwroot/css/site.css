@@ -4,8 +4,43 @@
     color: #000;
 }
 
+a {
+    font-size: 20px;
+    background-color: #f8f8f8;
+}
+
+.CardGame {
+    display: inline-block;
+    width: 270px;
+    margin-right: 15px;
+    background: #fff;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-transition: all .25s cubic-bezier(.33,.63,.65,.99);
+}
+
+    .CardGame.gameModule {
+        padding: 0 11px;
+        margin: 0;
+        height: 238px;
+        width: 288px;
+        overflow: initial;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        background-color: #f8f8f8;
+    }
+
 img {
-    width: 320px;
+    width: 270px;
+}
+
+
+.games-container .game-cards {
+    padding-left: 0px;
+    padding-top: 40px;
+
+    margin-right: -15px;
+    margin-left: -15px;
 }
 
 .CardGame {
@@ -23,3 +58,75 @@ img {
     box-shadow: 0 4px 16px -5px rgba(50,50,93,.12), 0 2px 3px -1px rgba(0,0,0,.08);
     margin-bottom: 20px;
 }
+
+.CardGame__image-container {
+    background: #fff;
+    z-index: 1;
+    overflow: hidden;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+}
+
+.CardGame.gameModule .CardGame__image-container {
+    height: 150px;
+}
+
+.CardGame__content-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+    position: relative;
+    height: 120px;
+    /*background: #fff;*/
+    padding: 10px;
+}
+
+.CardGame__content-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: .4em;
+    color: #000;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: -.02em;
+    font-family: UbisoftSans-Bold,UbisoftSans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    margin: 0;
+    padding-bottom: 5px;
+    line-height: 1;
+    font-size: 16px;
+}
+
+.CardGame__content-subtitle {
+    font-size: 10px;
+    font-family: Georgia,Times,Times New Roman,serif;
+    font-style: italic;
+    color: #5a5a5a;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    line-height: 1;
+    padding-right: 10px;
+}
+
+.CardGame.gameModule {
+    padding: 0 11px;
+    margin: 0;
+    height: 238px;
+    width: 288px;
+    overflow: initial;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: #f8f8f8;
+}
+
+/*.checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+    position: absolute;
+    margin-top: 4px \9;
+    margin-left: -20px;
+}*/
+
+    @media (min-width: 1200px) .container {
+        width: 1200px;
+    }

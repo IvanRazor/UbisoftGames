@@ -54,23 +54,23 @@
             <span class="sr-only">Next</span>
         </a>
     </div>*@
+<div class="games-container">
+    <div class="game-cards">
 
-<div class="row">
-
-    @foreach (var item in Model)
-    {
-        @*@Html.Raw(item.HtmlOpenTag)
-            <div class="col-lg-3">
-                <h2>@item.Game.Name</h2>
-                <ul>
-                    <li>@item.Game.Description</li>
-                </ul>
-            </div>
-            @Html.Raw(item.HtmlOpenTag)*@
+        @foreach (var item in Model)
+        {
+            @*@Html.Raw(item.HtmlOpenTag)
+                <div class="col-lg-3">
+                    <h2>@item.Game.Name</h2>
+                    <ul>
+                        <li>@item.Game.Description</li>
+                    </ul>
+                </div>
+                @Html.Raw(item.HtmlOpenTag)*@
         <a class="CardGame gameModule" href="/@item.Id">
             <div class="">
                 <div class="CardGame__image-container">
-                    <img src="~/images/ac_franchise-odyssey.jpg?imwidth=320" alt="card-game" class="CardGame__image">
+                    <img src="@Html.Raw( item.Image)" alt="card-game" class="CardGame__image">
                 </div>
                 <div class="CardGame__content-container">
                     <p class="CardGame__content-title gameModule">@item.Name</p>
@@ -81,6 +81,7 @@
             </div>
             <img alt="" class="CardGame__shadow" src="">
         </a>
-    }
+        }
 
+    </div>
 </div>

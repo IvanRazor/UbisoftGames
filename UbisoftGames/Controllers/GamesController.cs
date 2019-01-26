@@ -19,7 +19,6 @@ namespace UbisoftGames.Controllers
             _context = context;
         }
 
-        //[HttpGet("{id}")]
         [HttpGet]
         public async Task<IActionResult> Index()
         {
@@ -54,6 +53,45 @@ namespace UbisoftGames.Controllers
         {
             return View();
         }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Index([FromRoute] int id)
+        {
+            var game = await _context.Games.Where(x => x.Id == id).FirstOrDefaultAsync();
+            if (game == null)
+                return NotFound();
+
+            return View("/Views/Games/Details.cshtml", game);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)  
+        {
+            var game = await _context.Games.Where(x => x.Id == id).FirstOrDefaultAsync();
+            return View("/Views/Games/Edit.cshtml", game);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit([FromBody] Game game)
+        {
+            Game oldGame = await _context.Games.Where(x => x.Id == game.Id).FirstOrDefaultAsync();
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
+            oldGame = game;
+            _context.SaveChanges();
+
+            var games = await _context.Games.Select(x => x).ToListAsync();
+
+            return View("/Views/Games/Index.cshtml", games);
+            //return RedirectToPage("./Index");
+        }
+
+
+
 
         /*
         // GET: api/Games
