@@ -6,12 +6,13 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        @*<form asp-action="Edit">*@
+
         @using (Html.BeginForm())
         {
             @Html.AntiForgeryToken()
             @Html.HiddenFor(model => model.Id)
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 @Html.LabelFor(model => model.Name)
                 @Html.ValidationMessageFor(model => model.Name)
@@ -36,7 +37,7 @@
                 <input type="submit" value="Save" class="btn btn-default" />
             </div>
         }
-        @*</form>*@
+
     </div>
 </div>
 

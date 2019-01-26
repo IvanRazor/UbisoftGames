@@ -28,7 +28,7 @@ namespace UbisoftGames
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<GameContext>(opt => opt.UseInMemoryDatabase("Games"));
-            
+
             services.AddMvc();
         }
 
@@ -45,23 +45,18 @@ namespace UbisoftGames
                 app.UseHsts();
             }
 
-            //var context = app.ApplicationServices.GetService<GameContext>();
             TestData.AddTestData(app);
 
             app.UseMvc(
             routes =>
             {
-                routes.MapRoute("default", "{controller=Games}/{action=Index}/{id?}");
+                routes.MapRoute("Default", "{controller=Games}/{action=Index}/{id?}");
             });
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
-            /*app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("MVC didn't find current route");
-            });*/
         }
 
     }

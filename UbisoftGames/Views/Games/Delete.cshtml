@@ -1,0 +1,48 @@
+﻿@model UbisoftGames.Models.Game
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Game</h4>
+    <hr />
+    @using (Html.BeginForm(FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.Id)
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Image)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Image)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.IsReleased)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.IsReleased)
+            </dd>
+        </dl>
+
+        <div class="form-group">
+            <input type="submit" value="DeleteConfirmed" class="btn btn-default" />
+        </div>
+    }
+
+
+</div>
+
+<div>
+    @Html.ActionLink("Back to List", "Index", "/")
+</div>
