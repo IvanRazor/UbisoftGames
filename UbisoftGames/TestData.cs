@@ -36,6 +36,22 @@ Since its launch in February 2017, the game has undergone continual updates and 
 
                 context.Games.Add(new Models.Game
                 {
+                    Name = "The Settlers",
+                    Image = "/images/settlers_logo-thumb-750x422_331700.jpg",
+                    Description = @"The Settlers is a video game series. The first game in the series is The Settlers (1993). There are eight games in the series, including remakes. All the games were developed by the German studio Blue Byte, and were published by either Blue Byte or Ubisoft, the company that later acquired Blue Byte. The tablet version of the game is developed by Gameloft.",
+                    IsReleased = true
+                });
+
+                context.Games.Add(new Models.Game
+                {
+                    Name = "ANNO 1800",
+                    Image = "/images/1anno-100-thumbnail-750x422_mobile_297543.jpg",
+                    Description = @"Anno 1800 is a city building real-time strategy video game, developed by Blue Byte and published by Ubisoft, and is set to be launched within April 2019. It is the seventh game in the Anno series, and returns to the use of a historical setting following the last two titles, Anno 2070 and Anno 2205, taking place during the Industrial Revolution in the 19th century. Following the previous installment, the game returns to the series' traditional city-building and ocean combat mechanics, but introduces new aspects of gameplay, such as tourism, 'blue - printing', and the effects of industrialisation influences on island inhabitants.",
+                    IsReleased = true
+                });
+
+                context.Games.Add(new Models.Game
+                {
                     Name = "Tom Clancy's The Division 2",
                     Image = "/images/division2-ubicomgamepage-search_thumbnail-750x422_mobile_328763.jpg",
                     Description = @"om Clancy’s The Division is a revolutionary experience that combines robust RPG customization with tactical action combat. There’s never been a better time to jump in and join the fight to save NYC.",
@@ -53,32 +69,32 @@ Since its launch in February 2017, the game has undergone continual updates and 
                 context.Games.Add(new Models.Game
                 {
                     Name = "Just Dance 2019",
-                    Image = "/images/",
-                    Description = @"",
+                    Image = "/images/jd19-ubicom_search_thumbnail-750x422_325114.jpg",
+                    Description = @"Just Dance 2019 is a dance rhythm game developed by Ubisoft. It was unveiled on June 11, 2018, during its E3 press conference, and was released on October 23, 2018 on Nintendo Switch, Wii, Wii U, PlayStation 4, Xbox One and Xbox 360 in North America. It was also released on October 26, 2018 in Europe and Australia.",
                     IsReleased = true
                 });
 
                 context.Games.Add(new Models.Game
                 {
                     Name = "Watch Dogs 2",
-                    Image = "/images/",
-                    Description = @"",
+                    Image = "/images/wd2_free-search-thumbnail-ncsa_mobile_285807.jpg",
+                    Description = @"Watch Dogs 2 (stylized as WATCH_DOGS 2) is an action-adventure video game developed by Ubisoft Montreal and published by Ubisoft. It is the sequel to 2014's Watch Dogs and was released worldwide for PlayStation 4, Xbox One and Microsoft Windows in November 2016. Set within a fictionalized version of the San Francisco Bay Area, the game is played from a third-person perspective and its open world is navigated on-foot or by vehicle.",
                     IsReleased = true
                 });
 
                 context.Games.Add(new Models.Game
                 {
                     Name = "The Crew",
-                    Image = "/images/",
-                    Description = @"",
+                    Image = "/images/thecrew_logo-game_search-thumbnail_166219.jpg",
+                    Description = @"The Crew received a mixed reception upon release. Critics praised the game's world design but criticized the always-online aspect, which created technical glitches and other issues, the difficult-to-understand user interface, and the presence of microtransactions. The game shipped two million copies by January 1, 2015. It received an expansion, titled The Crew: Wild Run, which was released on November 17, 2015. Another expansion, entitled The Crew: Calling All Units, was announced at Gamescom 2016 and released on November 29, 2016. A sequel, The Crew 2, was released worldwide on June 29, 2018.",
                     IsReleased = true
                 });
 
                 context.Games.Add(new Models.Game
                 {
                     Name = "Prince of Persia The Forgotten Sands",
-                    Image = "/images/",
-                    Description = @"",
+                    Image = "/images/poptfs_searchthumbnail_mobile_158098.jpg",
+                    Description = @"Prince of Persia: The Forgotten Sands is a multi-platform video game produced by Ubisoft, which was released on May 18, 2010, in North America and on May 20 in Europe. The games mark a return to the storyline started by Prince of Persia: The Sands of Time. Prince of Persia: The Forgotten Sands is the title of four separate games with different storylines. The main game was developed for PlayStation 3, Xbox 360, and Microsoft Windows, while the other three are for the PlayStation Portable, Nintendo DS, and Wii.",
                     IsReleased = true
                 });
 
