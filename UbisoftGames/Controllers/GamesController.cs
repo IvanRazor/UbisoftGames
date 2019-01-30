@@ -69,7 +69,7 @@ namespace UbisoftGames.Controllers
                 _context.Entry(game).State = EntityState.Modified;
                 await _context.SaveChangesAsync();
 
-                return View("/Views/Games/Details.cshtml", game);
+                return Redirect("~/");
             }
         }
 
