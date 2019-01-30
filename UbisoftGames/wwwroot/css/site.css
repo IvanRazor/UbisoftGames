@@ -130,6 +130,14 @@ span.field-validation-error {
     padding-left: 30px;
 }
 
+.table-link {
+    font-size: 13px;
+}
+
+.row {
+    margin-bottom: 25px;
+}
+
 
 @media (min-width: 1200px) .container {
     width: 1200px;

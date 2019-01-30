@@ -17,14 +17,14 @@ namespace UbisoftGames.Models
 
         [Required]
         [MaxLength(200, ErrorMessage = "Max length is 200")]
-        [Display(Name = "Path to the image")]
+        [Display(Name = "Image")]
         public string Image { get; set; }
-
+          
         [Required]
         [MaxLength(500, ErrorMessage = "Max length is 500")]
         public string Description { get; set; }
 
-        [Display(Name = "Is the game already released?")]
+        [Display(Name = "Released?")]
         public bool IsReleased { get; set; }
     }
 

@@ -33,6 +33,12 @@ namespace UbisoftGames.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult Contacts()
+        {
+            return View();
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> Index([FromRoute] int id)
         {

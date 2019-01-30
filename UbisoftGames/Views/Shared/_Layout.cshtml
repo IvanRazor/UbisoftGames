@@ -21,9 +21,9 @@
         <div class="container">
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Games" asp-action="Index">All Games</a></li>
-                    <li><a asp-area="" asp-controller="Games" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Games" asp-action="Contact">Contact</a></li>
+                    <li>@Html.ActionLink("All Games", "Index", "/")</li>
+                    <li>@Html.ActionLink("About", "About", "Games")</li>
+                    <li>@Html.ActionLink("Contacts", "Contacts", "Games")</li>
                 </ul>
             </div>
         </div>
